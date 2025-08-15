@@ -1,4 +1,4 @@
-## **DSA Progress Tracker — Day 2>3**
+## **DSA Progress Tracker — Day 2>3>4**
 
 _(Topic: Singly Linked List)_
 
@@ -42,6 +42,16 @@ _(Topic: Singly Linked List)_
     - **String method**: Built a string and compared with reverse.
     - **Stack method**: Pushed all values to stack, then compared while popping.
     - **Two-pointer method**: Compared nodes from both ends moving inward.
+  - **Move Tail to Head** _(Medium)_
+    - Found the last node and second-to-last node.
+    - Detached last node by making `second_to_last.next = None`.
+    - Linked last node to old head and updated head pointer.
+    - Key check: Only perform if list length ≥ 2.
+  - **Sum Two Linked Lists** _(Medium–Hard)_
+    - Each list stores digits in reverse order (e.g., 5 → 6 → 3 = 365).
+    - Used two pointers and carry variable.
+    - At each step: got digit values, calculated sum, extracted new digit as `sum % 10`, updated carry as `sum // 10`.
+    - Handled three scenarios: both lists active, one list remaining, final carry.
 
 ---
 
@@ -57,6 +67,10 @@ _(Topic: Singly Linked List)_
   - Intersection of Two Linked Lists _(Medium)_
   - Palindrome check using in-place list reversal _(Medium–Hard)_
   - Reverse a Linked List — practice until pointer movements are second nature
+  - Move Tail to Head — practice on lists with length 2 and large lists to confirm no pointer errors
+  - Sum Two Linked Lists — practice for cases with final carry > 0
+  - Add Two Numbers when lists store digits in forward order _(Medium–Hard)_
+  - Add Two Numbers with arbitrary long integers _(Hard)_
 - **Applications**:
   - Implement stack/queue using linked list _(Medium)_
   - Polynomial representation _(Medium)_
