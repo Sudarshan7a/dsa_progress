@@ -22,3 +22,20 @@ return nums
 
 sol3. using '\_' operator
 return nums \* 2
+
+# Contains Duplicate
+
+my solution
+class Solution:
+def containsDuplicate(self, nums: List[int]) -> bool:
+result = set()
+for i in range(len(nums)):
+if nums[i] in result:
+return True
+else:
+result.add(nums[i])
+return False
+
+other solutions
+sol1. sorting
+nums.sort() // this will sort the entire array and now we can check if adjacent elements are equal to find duplicates
