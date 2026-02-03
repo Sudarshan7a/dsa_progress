@@ -39,3 +39,6 @@ return False
 other solutions
 sol1. sorting
 nums.sort() // this will sort the entire array and now we can check if adjacent elements are equal to find duplicates
+
+sol2.
+return True if len(set(nums) < len(nums)) else False // check the length of the set after adding all the elements from the list or convering the list, cuz set won't store duplicate elements
