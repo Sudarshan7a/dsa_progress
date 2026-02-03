@@ -42,3 +42,42 @@ nums.sort() // this will sort the entire array and now we can check if adjacent 
 
 sol2.
 return True if len(set(nums) < len(nums)) else False // check the length of the set after adding all the elements from the list or convering the list, cuz set won't store duplicate elements
+
+# Valid Anagram
+
+my solution 1
+class Solution:
+def isAnagram(self, s: str, t: str) -> bool:
+hashMap = {}
+for ele in s:
+if ele in hashMap.keys():
+hashMap[ele]+=1
+else:
+hashMap[ele]=1 # print(hashMap)
+for ele in t:
+if ele in hashMap.keys():
+if hashMap[ele]==0:
+return False
+hashMap[ele]-=1
+else:
+return False # print(hashMap)
+for ele in hashMap.values():
+if ele != 0:
+return False
+return True
+
+my solution 2
+alphaFeq = [0] \*26
+
+        for ele in s:
+            alphaFeq[ord(ele)-97] +=1
+        for ele in t:
+            alphaFeq[ord(ele)-97] -=1
+
+        for i in alphaFeq:
+            if i != 0:
+                return False
+        return True
+
+other solution
+return True if hashMap of s == hashMap of t else False
